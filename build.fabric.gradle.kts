@@ -42,7 +42,7 @@ dependencies {
 
 loom {
 	accessWidenerPath = sc.process(
-		rootProject.file("src/main/resources/advantimations.classtweaker"),
+		rootProject.file("src/main/resources/clientsidehurtanimations.classtweaker"),
 		"build/processed.classtweaker"
 	)
 	runConfigs.all {
@@ -72,7 +72,7 @@ tasks {
 		filesMatching(listOf("fabric.mod.json")) { expand(props) }
 
 		val mixinJava = "JAVA_${javaVersion.majorVersion}"
-		filesMatching("advantimations.mixins.json5") { expand("mixinJava" to mixinJava) }
+		filesMatching("clientsidehurtanimations.mixins.json5") { expand("mixinJava" to mixinJava) }
 
         outputs.upToDateWhen { false }
 	}

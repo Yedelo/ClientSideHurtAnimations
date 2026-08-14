@@ -41,7 +41,7 @@ neoForge {
 	interfaceInjectionData.from("../../neoforge.injections.json")
 
 	mods {
-		register("advantimations") {
+		register("clientsidehurtanimations") {
 			sourceSet(sourceSets.main.get())
 		}
 	}
@@ -61,7 +61,7 @@ tasks {
 			set(key, value)
 		}
 		exclude("fabric.mod.json")
-		exclude("advantimations.classtweaker")
+		exclude("clientsidehurtanimations.classtweaker")
 
 		fun target(version: String) = "[$version,)"
 		val props = buildMap {
@@ -77,7 +77,7 @@ tasks {
 		filesMatching(listOf("META-INF/neoforge.mods.toml")) { expand(props) }
 
 		val mixinJava = "JAVA_${javaVersion.majorVersion}"
-		filesMatching("advantimations.mixins.json5") { expand("mixinJava" to mixinJava) }
+		filesMatching("clientsidehurtanimations.mixins.json5") { expand("mixinJava" to mixinJava) }
 
         outputs.upToDateWhen { false }
 	}

@@ -13,8 +13,6 @@ stonecutter active "26.2-fabric"
 stonecutter parameters {
     val loader = current.project.split("-")[1]
 
-    constants["spear"] = current.parsed >= "1.21.11"
-
     constants {
         match(loader, "fabric", "neoforge")
     }
@@ -61,10 +59,10 @@ stonecutter parameters {
     val maxMc by Declare(if (rangedVersion) properties.get<String>("mc.max") else null)
 
     val minecraftTarget by Declare(if (rangedVersion) "${current.version}-$maxMc" else current.version)
-    val finalFileName by Declare("Advantimations-$version+$minecraftTarget-$loader.jar")
+    val finalFileName by Declare("ClientSideHurtAnimations-$version+$minecraftTarget-$loader.jar")
 
     val modrinthReadme by Declare(rootProject.file("README.md").readText()
-        .replace("src/main/resources/assets/advantimations/advantimations.png", modrinthLogoLink)
+        .replace("src/main/resources/assets/clientsidehurtanimations/clientsidehurtanimations.png", modrinthLogoLink)
     )
 }
 
