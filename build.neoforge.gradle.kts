@@ -5,6 +5,9 @@ import org.gradle.api.tasks.Copy
 import org.gradle.kotlin.dsl.invoke
 import kotlin.reflect.KProperty
 import me.modmuss50.mpp.ReleaseType
+import org.gradle.internal.Actions.set
+import org.gradle.internal.Transformers.type
+import org.gradle.internal.classpath.Instrumented.start
 
 plugins {
 	id("net.neoforged.moddev") version "2.0.140"
@@ -37,8 +40,6 @@ dependencies {
 
 neoForge {
 	version = sc.properties["versions.neoforge"]
-
-	interfaceInjectionData.from("../../neoforge.injections.json")
 
 	mods {
 		register("clientsidehurtanimations") {
