@@ -13,7 +13,7 @@
     "sources": "https://github.com/Yedelo/ClientSideHurtAnimations"
   },
   "license": "${license}",
-  "icon": "assets/clientsidehurtanimations/clientsidehurtanimations.png",
+  "icon": "assets/clientsidehurtanimations/logo/clientsidehurtanimations.png",
   "environment": "client",
   "entrypoints": {
     "client": [

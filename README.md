@@ -1,6 +1,6 @@
 # ClientSideHurtAnimations
 
-![logo](src/main/resources/assets/advantimations/advantimations.png)
+![logo](src/main/resources/assets/clientsidehurtanimations/logo/clientsidehurtanimations.png)
 
 ![discord yedel](https://img.shields.io/badge/discord-yedel-blue)
 
