@@ -3,7 +3,7 @@
   "id": "clientsidehurtanimations",
   "version": "${version}",
   "name": "ClientSideHurtAnimations",
-  "description": "Client-side mod to cancel animations",
+  "description": "Adds client-side hurt animations when attacking entities",
   "authors": [
     "Yedel"
   ],
