@@ -26,7 +26,6 @@
   "mixins": [
     "clientsidehurtanimations.mixins.json5"
   ],
-  "accessWidener": "clientsidehurtanimations.classtweaker",
   "depends": {
     "java": "${java}",
     "fabricloader": "${fabricLoader}",
