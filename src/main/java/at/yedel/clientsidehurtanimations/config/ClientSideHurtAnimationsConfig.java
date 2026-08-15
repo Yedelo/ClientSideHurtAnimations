@@ -38,6 +38,10 @@ public class ClientSideHurtAnimationsConfig {
         )
         .build();
 
+    private static final Identifier ENABLED_ON_PLAYERS_IMAGE = Identifier.fromNamespaceAndPath("clientsidehurtanimations", "options/enabled-on-players.png");
+    private static final Identifier ONLY_ENABLED_ON_REAL_PLAYERS_IMAGE = Identifier.fromNamespaceAndPath("clientsidehurtanimations", "options/only-enabled-on-real-players.png");
+    private static final Identifier ENABLED_ON_OTHER_ENTITIES_IMAGE = Identifier.fromNamespaceAndPath("clientsidehurtanimations", "options/enabled-on-other-entities.png");
+
     public static ClientSideHurtAnimationsConfig getInstance() {
         return HANDLER.instance();
     }
@@ -59,6 +63,7 @@ public class ClientSideHurtAnimationsConfig {
                     ConfigCategory.createBuilder().name(Component.literal("General"))
                         .option(Option.<Boolean>createBuilder()
                             .name(Component.literal("Enabled"))
+                            .description(OptionDescription.of(Component.literal("Global toggle for the mod.")))
                             .binding(
                                 defaults.isEnabled(),
                                 config::isEnabled,
@@ -69,7 +74,7 @@ public class ClientSideHurtAnimationsConfig {
                         )
                         .option(Option.<Boolean>createBuilder()
                             .name(Component.literal("Enabled on Players"))
-                            .description(OptionDescription.of(Component.literal("Enable client-side hurt animations for players.")))
+                            .description(createDescription("Enable client-side hurt animations for players.", ENABLED_ON_PLAYERS_IMAGE))
                             .binding(
                                 defaults.isEnabledOnPlayers(),
                                 config::isEnabledOnPlayers,
@@ -80,7 +85,7 @@ public class ClientSideHurtAnimationsConfig {
                         )
                         .option(Option.<Boolean>createBuilder()
                             .name(Component.literal("Only Enabled on Real Players"))
-                            .description(OptionDescription.of(Component.literal("Only enable client-side hurt animations for real players (UUID version == 4).")))
+                            .description(createDescription("Only enable client-side hurt animations for real players (UUID version == 4).", ONLY_ENABLED_ON_REAL_PLAYERS_IMAGE))
                             .binding(
                                 defaults.isOnlyEnabledOnRealPlayers(),
                                 config::isOnlyEnabledOnRealPlayers,
@@ -91,7 +96,7 @@ public class ClientSideHurtAnimationsConfig {
                         )
                         .option(Option.<Boolean>createBuilder()
                             .name(Component.literal("Enabled on Other Entities"))
-                            .description(OptionDescription.of(Component.literal("Enable client-side hurt animations for other non-player entities, such as zombies.")))
+                            .description(createDescription("Enable client-side hurt animations for other non-player entities, such as zombies.", ENABLED_ON_OTHER_ENTITIES_IMAGE))
                             .binding(
                                 defaults.isEnabledOnOtherEntities(),
                                 config::isEnabledOnOtherEntities,
@@ -105,6 +110,10 @@ public class ClientSideHurtAnimationsConfig {
                 return builder;
             }
         ).generateScreen(parent);
+    }
+
+    private static OptionDescription createDescription(String description, Identifier image) {
+        return OptionDescription.createBuilder().text(Component.literal(description)).image(image, 1920, 1080).build();
     }
 
     public boolean isEnabled() {
