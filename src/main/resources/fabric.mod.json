@@ -23,9 +23,6 @@
       "at.yedel.clientsidehurtanimations.utils.ClientSideHurtAnimationsModMenu"
     ]
   },
-  "mixins": [
-    "clientsidehurtanimations.mixins.json5"
-  ],
   "depends": {
     "java": "${java}",
     "fabricloader": "${fabricLoader}",

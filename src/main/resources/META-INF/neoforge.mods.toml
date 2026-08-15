@@ -13,9 +13,6 @@ logoBlur = false
 authors = "Yedel"
 displayURL = "https://modrinth.com/mod/clientsidehurtanimations/"
 
-[[mixins]]
-config = "clientsidehurtanimations.mixins.json5"
-
 [features.clientsidehurtanimations]
 javaVersion = "${java}"
 
