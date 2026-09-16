@@ -33,10 +33,10 @@ val license: String by project
 dependencies {
 	minecraft("com.mojang:minecraft:${sc.current.version}")
 	loomx.applyMojangMappings()
-	modImplementation("net.fabricmc:fabric-loader:${property("versions.fabricLoader")}")
-	modImplementation("net.fabricmc.fabric-api:fabric-api:${property("versions.fabricApi")}")
+	modImplementation("net.fabricmc:fabric-loader:${sc.properties["versions.fabricLoader"]}")
+	modImplementation("net.fabricmc.fabric-api:fabric-api:${sc.properties["versions.fabricApi"]}")
 
-	modApi("com.terraformersmc:modmenu:${property("versions.modMenu")}")
+	modApi("com.terraformersmc:modmenu:${sc.properties["versions.modMenu"]}")
 	modImplementation("dev.isxander:yet-another-config-lib:$yaclVersion")
 }
 
