@@ -91,7 +91,7 @@ publishMods {
 	modrinth {
 		displayName.set("${project.version.toString()} for Fabric ${sc.current.version}")
 		accessToken = System.getenv("MODRINTH_TOKEN")
-		projectId.set("c0aI2COX")
+		projectId.set("e5N82J3a")
 		environment = CLIENT_ONLY
 		projectDescription = modrinthReadme
 		if (rangedVersion) {
