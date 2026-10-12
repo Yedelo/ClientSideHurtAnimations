@@ -1,3 +1,3 @@
-## **1.0.1**
+## **1.0.2**
 
-- Add 26.3 compatibility
+- Added OneConfig mod toggle support
