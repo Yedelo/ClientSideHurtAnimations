@@ -1,5 +1,6 @@
 versions.fabricLoader = "0.19.3"
 versions.fancyModLoader = "4.0.43"
+versions.modToggles = "1.0.0"
 
 ["26.1-fabric"]
 versioning = "range"

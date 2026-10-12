@@ -50,7 +50,7 @@ public class ClientSideHurtAnimationsConfig {
         HANDLER.load();
     }
 
-    @SerialEntry private boolean enabled = false;
+    @SerialEntry public boolean enabled = false;
 
     @SerialEntry private boolean enabledOnPlayers = true;
     @SerialEntry private boolean onlyEnabledOnRealPlayers = false;

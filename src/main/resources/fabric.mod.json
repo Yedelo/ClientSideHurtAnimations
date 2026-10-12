@@ -21,6 +21,9 @@
     ],
     "modmenu": [
       "at.yedel.clientsidehurtanimations.utils.ClientSideHurtAnimationsModMenu"
+    ],
+    "oneconfig:toggle": [
+      "at.yedel.clientsidehurtanimations.utils.ClientSideHurtAnimationsModToggle"
     ]
   },
   "depends": {
